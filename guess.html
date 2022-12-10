@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>number guessing game</title>
+<style>
+.content {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="content">
+<center>
+<h2>Number Guessing Game</h2>
+<input type="number" name="num" id="num">
+<button onclick="check()" >Check</button>
+<div id="res"></div>
+</center>
+</div>
+<script>
+let g= Math.floor((Math.random() * 10) + 1);
+function check() {
+if (document.getElementById('num').value>g){
+document.getElementById('res').innerHTML="number to be guessed is lesser than entered number"+" "+document.getElementById('num').value;
+}
+if (document.getElementById('num').value<g){
+document.getElementById('res').innerHTML="number to be guessed is greater than entered number"+" "+document.getElementById('num').value;
+}
+if (document.getElementById('num').value==g){
+document.getElementById('res').innerHTML="Yaayyy , The number is right";
+}
+}
+</script>
+</body>
+</html>
